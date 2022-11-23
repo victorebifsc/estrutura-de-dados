@@ -47,7 +47,7 @@ void main(){
         else{
             printf("\e[1;92m");
         }
-        printf("%5d aparece %5d vezes\n", uniqueNumbers[a], ocurrences);
+        printf("o valor %6d aparece %6d vezes", uniqueNumbers[a], ocurrences);
         printf("\e[0m\n");
     }
 
