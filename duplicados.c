@@ -3,6 +3,7 @@
 #define MAX 999
 
 void main(){
+    system("");
 
     int number = 1;
     int numbers[MAX];
@@ -18,6 +19,7 @@ void main(){
             nSize++;
         }
     }
+    system("cls");
 
     for(int a = 0; a < nSize; a++){
         int ocurrences = 0;
@@ -32,7 +34,6 @@ void main(){
         }
     }
 
-
     for (int a = 0; a < uSize; a++){
         int ocurrences = 0;
         for (int b = 0; b < nSize; b++){
@@ -40,16 +41,22 @@ void main(){
                 ocurrences++;
             }
         }
-        printf("%d aparece %d vezes\n", uniqueNumbers[a], ocurrences);
+        if (ocurrences > 1){
+            printf("\e[1;91m");
+        }
+        else{
+            printf("\e[1;92m");
+        }
+        printf("%5d aparece %5d vezes\n", uniqueNumbers[a], ocurrences);
+        printf("\e[0m\n");
     }
+
 
     /*
     for(int i = 0; i < uSize; i++){
         printf("%d ", uniqueNumbers[i]);
     }
-
     printf("\n");
-
     for(int i = 0; i < nSize; i++){
         printf("%d ", numbers[i]);
     }
